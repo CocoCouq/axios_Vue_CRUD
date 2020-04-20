@@ -44,6 +44,7 @@ if ($action === 'create') {
 
 }
 
+// EDIT PLAYER
 if ($action === 'edit') {
     $array_player = [
         ':name' => filter_input(INPUT_POST, 'nameEdit', FILTER_SANITIZE_STRING),
@@ -63,6 +64,7 @@ if ($action === 'edit') {
     }
 }
 
+// DELETE PLAYER
 if ($action === 'delete') {
     $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 
@@ -80,6 +82,7 @@ if ($action === 'delete') {
     }
 }
 
+// Add error to result
 $result['error'] = $error;
 
 header("Access-Control-Allow-Origin: *");

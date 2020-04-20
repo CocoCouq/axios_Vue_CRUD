@@ -1,0 +1,2 @@
+// Materialize initialisation
+M.AutoInit();
